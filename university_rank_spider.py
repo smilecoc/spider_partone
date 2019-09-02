@@ -24,12 +24,14 @@ def fillunivlist(ulist,html):
 
 #格式化输出并控制输出的数量
 def printunivlist(ulist,num):
+    #格式化输出，^居中对齐输出,10为最大的字符串长度
     print("{:^10}\t{:^6}\t{:^10}".format("rank","univerity","province"))
     for i in range(num):
         u=ulist[i]
         print("{:^10}\t{:^6}\t{:^10}".format(u[0],u[1],u[2]))
         #print("suc"+str(num))
 
+#定义主函数并赋值变量
 def main():
     unifo=[]
     url="http://www.zuihaodaxue.com/zuihaodaxuepaiming2016.html"
@@ -37,4 +39,5 @@ def main():
     fillunivlist(unifo,html)
     printunivlist(unifo,20)
 
+#运行
 main()
